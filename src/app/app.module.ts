@@ -9,6 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ServiceComponent } from './service/service.component';
 import { routing } from './app.route';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
+import { PriceComponent } from './price/price.component';
+import { ContactComponent } from './contact/contact.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,18 @@ import { routing } from './app.route';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ServiceComponent
+    ServiceComponent,
+    PortfolioComponent,
+    TestimonialComponent,
+    PriceComponent,
+    ContactComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-	routing
+	  routing
   ],
   providers: [],
   bootstrap: [AppComponent]
