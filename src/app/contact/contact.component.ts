@@ -5,15 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
-
-  constructor(
-  	public id:number,
-  	public name:string,
-  	public power:string,
-  	public alterEgo?:string
-  ) { }
-  ngOnInit() {
-  }
-
+export class ContactComponent {
+  
 }
