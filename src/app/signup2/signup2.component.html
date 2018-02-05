@@ -1,0 +1,48 @@
+<main class="site-content" role="main">
+		<section id="contact" >
+			<div class="container">
+					<div class="row">
+						<div class="container col-md-7 contact-form wow animated fadeInLeft">
+							<div class="modal-body modal-form-pd">
+					            <form #inviteForm = "ngForm" (ngSubmit)="submitForm(inviteForm.value)" novalidate autocomplete="off">
+					              
+					              <div class="form-group move">
+					                <label class="email-label" for="fName">First Name *</label>
+					                <input [(ngModel)]="inviteFormObj.fName" type="text" class="form-control" id="fName" name="fName" #fName = "ngModel" required maxlength="20" (change)="removeWhitespace('fName')" >
+					               
+					                <div *ngIf="fName.errors && (fName.dirty)" class="error">
+					                  <span [hidden]="!fName.errors.required" class="error">First name cannot be blank </span>
+					                </div>
+					              </div>
+					              
+					              <div class="form-group move">
+					                <label class="email-label" for="lName">Last Name *</label>
+					                <input [(ngModel)]="inviteFormObj.lName" type="text"  class="form-control" id="lName" name="lName" #lName = "ngModel" required maxlength="20" (change)="removeWhitespace('lName')">
+					               
+					                <div *ngIf="lName.errors && (lName.dirty)" class="error">
+					                  <span [hidden]="!lName.errors.required" class="error">Last name cannot be blank</span>
+					                </div>
+					              </div>
+					              
+					              <div class="form-group move">
+					                <label class="email-label" for="email">Email *</label>
+					                <input type="email" [(ngModel)]="inviteFormObj.email"  class="form-control" id="email" name="email"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email = "ngModel" maxlength="50" (change)="removeWhitespace('email')" required>
+					               
+
+					                <div *ngIf="email.errors && (email.dirty )" class="error">
+					                  <span *ngIf="email.errors && email.errors.required" class="error">Email cannot be blank</span>
+					                  <span *ngIf="email.errors && email.errors.pattern" class="error">Email is not valid </span>
+					                </div>
+					                <!-- <span [hidden]="email.valid || email.pristine" class="error">email Name not valid</span> -->
+					              </div>
+					              <!-- <a  class="btn sharp-bg wid-150 mt-30">Send</a> -->
+					              <button type="submit" class="btn sharp-bg wid-150 mt-30" [disabled]="!inviteForm.form.valid">Send</button>
+					            
+					            </form>
+					          </div>
+						</div>
+					</div>
+			</div>
+		</section>
+</main>
+

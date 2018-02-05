@@ -15,6 +15,8 @@ import { PriceComponent } from './price/price.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignupComponent } from './signup/signup.component';
 import { CustomFormsModule } from 'ng2-validation';
+import { Signup2Component } from './signup2/signup2.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { CustomFormsModule } from 'ng2-validation';
     TestimonialComponent,
     PriceComponent,
     ContactComponent,
-    SignupComponent
+    SignupComponent,
+    Signup2Component,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
