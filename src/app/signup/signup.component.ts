@@ -30,4 +30,6 @@ export class SignupComponent{
 
     get format()   { return this.toggle ? 'shortDate' : 'fullDate'; }
     toggleFormat() { this.toggle = !this.toggle; }
+
+    
 }
